@@ -11,13 +11,6 @@ jobs:
         node-version: [16.x]
 
     steps:
-      # We fetch to 0 so we can collect the commits
-      # since last update
-      - name: Checkout code
-        uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-          ref: ${{ github.ref }}
 
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
